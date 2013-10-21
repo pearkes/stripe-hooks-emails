@@ -12,8 +12,6 @@
                                     </h1>
                                     <p style="font-size: 13px; padding: 0 0 10px;">
                                         Generated at: {{ meta['current_timestamp'] }}
-                                    </p>
-                                    <p style="font-size: 13px; padding: 0 0 10px;">
                                         {% if business.name %}
                                         Business Name: {{ business.name }}
                                         {% endif %}
@@ -22,26 +20,8 @@
                             </tr>
                             <tr>
                                 <td style="border-top-color: #eeeeee; border-top-width: 1px; border-top-style: solid; border-bottom-color: #eeeeee; border-bottom-width: 1px; border-bottom-style: solid;">
-                                    <table width="100%" cellpadding="0" cellspacing="0" style="margin: 5px 0;">
-                                        <tr>
-                                            <th style="text-align: left; padding: 10px;">
-                                                <span style="font-size: 13px; font-weight: bold;">Item</span>
-                                            </th>
-                                            <th style="padding: 10px;" align="right">
-                                                <span style="font-size: 13px; font-weight: bold;">Value</span>
-                                            </th>
-                                        </tr>
-                                        {% for key in data.keys() %}
-                                        <tr style="background-color: #ffffff">
-                                            <td style="font-size: 13px; padding: 10px 10px; text-transform: capitalize;">
-                                                {{ key }}
-                                            </td>
-                                            <td style="font-size: 13px; padding: 10px 10px;" align="right">
-                                                {{ data[key] }}
-                                            </td>
-                                        </tr>
-                                        {% endfor %}
-                                    </table>
+                                    {% block content %}
+                                    {% endblock %}
                                 </td>
                             </tr>
                             <tr>

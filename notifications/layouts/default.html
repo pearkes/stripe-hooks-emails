@@ -1,0 +1,42 @@
+<table cellspacing="0" cellpadding="0" width="100%" style="font-family: Helvetica Neue, Arial, Helvetica, sans-serif;">
+    <tr>
+        <td align="center" valign="top">
+            <table cellpadding="0" cellspacing="0" style="width: 600px">
+                <tr>
+                    <td style="padding: 25px 0;">
+                        <table width="100%" cellpadding="0" cellspacing="0" style="padding: 10px 15px; background: #ffffff; border: 1px solid #c6c6c6; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px;">
+                            <tr>
+                                <td>
+                                    <h1 style="font-size: 20px; font-weight: bold; margin: 10px 0 20px 0; padding: 0 0 10px; border-bottom-color: #e8e8e8; border-bottom-width: 1px; border-bottom-style: solid;" align="left">
+                                        {{ meta['subject'] }}
+                                    </h1>
+                                    <p style="font-size: 13px; padding: 0 0 10px;">
+                                        Generated at: {{ meta['current_timestamp'] }}
+                                    </p>
+                                    <p style="font-size: 13px; padding: 0 0 10px;">
+                                        {% if business.name %}
+                                        Business Name: {{ business.name }}
+                                        {% endif %}
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-top-color: #eeeeee; border-top-width: 1px; border-top-style: solid; border-bottom-color: #eeeeee; border-bottom-width: 1px; border-bottom-style: solid;">
+                                    {% block content %}
+                                    {% endblock %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="color: #adadad; font-size: 13px; margin: 15px 0; padding: 0;" align="left">
+                                        This is an automated notification sent by <a style="color: #777" href="https://github.com/pearkes/stripe-hooks">stripe-hooks</a>. To learn how to change your alert settings or customize the content of these emails, visit the <a style="color: #777" href="https://github.com/pearkes/stripe-hooks#readme">readme</a>.
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

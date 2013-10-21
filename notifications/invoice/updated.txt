@@ -1,1 +1,4 @@
-{% include "default.txt" %}
+{% extends "layouts/default.txt" %}
+{% block content %}
+{% endblock %}
+
