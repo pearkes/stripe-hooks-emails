@@ -1,1 +1,16 @@
-{% include "default.txt" %}
+{{ meta['subject'] }}
+
+Generated at: {{ meta['current_timestamp'] }}
+{% if business.name %}
+Business Name: {{ business.name }}
+{% endif %}
+
+------------------------------------------------------------
+{% for key in data.keys() %}
+{{ key }}: {{ data[key] }}
+{% endfor %}
+------------------------------------------------------------
+
+This is an automated notification sent by stripe-hooks. To learn how
+to change your alert settings or customize the content of these emails,
+visit the readme: https://github.com/pearkes/stripe-hooks#readme.
