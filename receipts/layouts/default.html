@@ -12,6 +12,8 @@
                                     </h1>
                                     <p style="font-size: 13px; padding: 0 0 10px;">
                                         Generated at: {{ meta['current_timestamp'] }}
+                                    </p>
+                                    <p style="font-size: 13px; padding: 0 0 10px;">
                                         {% if business.name %}
                                         Business Name: {{ business.name }}
                                         {% endif %}
@@ -22,13 +24,6 @@
                                 <td style="border-top-color: #eeeeee; border-top-width: 1px; border-top-style: solid; border-bottom-color: #eeeeee; border-bottom-width: 1px; border-bottom-style: solid;">
                                     {% block content %}
                                     {% endblock %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p style="color: #adadad; font-size: 13px; margin: 15px 0; padding: 0;" align="left">
-                                        This is an automated notification sent by <a style="color: #777" href="https://github.com/pearkes/stripe-hooks">stripe-hooks</a>. To learn how to change your alert settings or customize the content of these emails, visit the <a style="color: #777" href="https://github.com/pearkes/stripe-hooks#readme">readme</a>.
-                                    </p>
                                 </td>
                             </tr>
                         </table>
