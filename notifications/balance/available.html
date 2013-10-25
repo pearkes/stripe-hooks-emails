@@ -10,12 +10,14 @@
         </th>
     </tr>
     <tr style="background-color: #ffffff">
+        {% for am in data.available %}
         <td style="font-size: 13px; padding: 10px 10px; text-transform: capitalize;">
-            ID:
+            Amount:
         </td>
         <td style="font-size: 13px; padding: 10px 10px;" align="right">
-            {{ data.id }}
+            {{ am.amount }}
         </td>
+        {% endfor %}
     </tr>
 </table>
 {% endblock %}

@@ -1,4 +1,6 @@
 {% extends "layouts/default.txt" %}
 {% block content %}
-ID: {{ data.id }}
+{% for am in data.available %}
+Amount: {{ am.amount }}
+{% endfor %}
 {% endblock %}
