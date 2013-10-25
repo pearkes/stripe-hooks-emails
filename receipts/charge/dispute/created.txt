@@ -1,4 +1,0 @@
-{% extends "layouts/default.txt" %}
-{% block content %}
-ID: {{ data.id }}
-{% endblock %}
